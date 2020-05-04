@@ -1,0 +1,17 @@
+{
+  "name": "SahayakApp",
+  "displayName": "SahayakApp",
+  "expo": {
+    "name": "SahayakApp",
+    "slug": "SahayakApp",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
