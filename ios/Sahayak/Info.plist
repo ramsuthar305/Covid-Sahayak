@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>SahayakApp</string>
+	<string>Sahayak</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -57,26 +57,26 @@
 		</dict>
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
-	<string>Allow SahayakApp to access your calendar</string>
+	<string>Allow Sahayak to access your calendar</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Allow SahayakApp to use the camera</string>
+	<string>Allow Sahayak to use the camera</string>
 	<key>NSContactsUsageDescription</key>
-	<string>Allow SahayakApp experiences to access your contacts</string>
+	<string>Allow Sahayak experiences to access your contacts</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Allow SahayakApp to use your location</string>
+	<string>Allow Sahayak to use your location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Allow SahayakApp to use your location</string>
+	<string>Allow Sahayak to use your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow SahayakApp to use your location</string>
+	<string>Allow Sahayak to use your location</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Allow SahayakApp to access your microphone</string>
+	<string>Allow Sahayak to access your microphone</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Allow SahayakApp to access your device's accelerometer</string>
+	<string>Allow Sahayak to access your device's accelerometer</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Give SahayakApp periences permission to save photos</string>
+	<string>Give Sahayak periences permission to save photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Give SahayakApp periences permission to access your photos</string>
+	<string>Give Sahayak periences permission to access your photos</string>
 	<key>NSRemindersUsageDescription</key>
-	<string>Allow SahayakApp to access your reminders</string>
+	<string>Allow Sahayak to access your reminders</string>
 </dict>
 </plist>

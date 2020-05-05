@@ -1,9 +1,9 @@
 {
-  "name": "SahayakApp",
-  "displayName": "SahayakApp",
+  "name": "Sahayak",
+  "displayName": "Sahayak",
   "expo": {
-    "name": "SahayakApp",
-    "slug": "SahayakApp",
+    "name": "Sahayak",
+    "slug": "Sahayak",
     "version": "1.0.0",
     "platforms": [
       "ios",

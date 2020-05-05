@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0731D3BE24204D9B009CAE85 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0731D3BB24204D9B009CAE85 /* Expo.plist */; };
-		074F4BDE2432834300BDB9FE /* app.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07287ACD2432831900C893F0 /* app.bundle */; };
-		074F4BDF2432834300BDB9FE /* app.manifest in Resources */ = {isa = PBXBuildFile; fileRef = 07287ACC2432831900C893F0 /* app.manifest */; };
+		0731D3B824204D62009CAE85 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0731D3B524204D62009CAE85 /* Expo.plist */; };
+		074F4BDC2432833400BDB9FE /* app.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07C2E6E4243282B30028AF0A /* app.bundle */; };
+		074F4BDD2432833400BDB9FE /* app.manifest in Resources */ = {isa = PBXBuildFile; fileRef = 07C2E6E3243282B30028AF0A /* app.manifest */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7B0C5784998A29E517983E0C /* libPods-SahayakApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2502ACF51380E8237829647D /* libPods-SahayakApp.a */; };
+		3DE4DAD41476765101945408 /* libPods-Sahayak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FF9D506E70904424FA7E9 /* libPods-Sahayak.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		056F63395CAC2B8C2DC048FE /* Pods-SahayakApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SahayakApp.debug.xcconfig"; path = "Target Support Files/Pods-SahayakApp/Pods-SahayakApp.debug.xcconfig"; sourceTree = "<group>"; };
-		07287ACC2432831900C893F0 /* app.manifest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = app.manifest; path = "SahayakApp/Supporting/app.manifest"; sourceTree = "<group>"; };
-		07287ACD2432831900C893F0 /* app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = app.bundle; path = "SahayakApp/Supporting/app.bundle"; sourceTree = "<group>"; };
-		0731D3BB24204D9B009CAE85 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Expo.plist; path = SahayakApp/Supporting/Expo.plist; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* SahayakApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SahayakApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SahayakApp/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SahayakApp/AppDelegate.m; sourceTree = "<group>"; };
+		0731D3B524204D62009CAE85 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Expo.plist; path = Sahayak/Supporting/Expo.plist; sourceTree = "<group>"; };
+		07C2E6E3243282B30028AF0A /* app.manifest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = app.manifest; path = "Sahayak/Supporting/app.manifest"; sourceTree = "<group>"; };
+		07C2E6E4243282B30028AF0A /* app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = app.bundle; path = "Sahayak/Supporting/app.bundle"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Sahayak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahayak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Sahayak/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Sahayak/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SahayakApp/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SahayakApp/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SahayakApp/main.m; sourceTree = "<group>"; };
-		2502ACF51380E8237829647D /* libPods-SahayakApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SahayakApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Sahayak/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sahayak/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Sahayak/main.m; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E40B1F720DE0D29BF6B90074 /* Pods-SahayakApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SahayakApp.release.xcconfig"; path = "Target Support Files/Pods-SahayakApp/Pods-SahayakApp.release.xcconfig"; sourceTree = "<group>"; };
+		3B47C5AFCB8BDE514B7D1AC6 /* Pods-Sahayak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sahayak.debug.xcconfig"; path = "Target Support Files/Pods-Sahayak/Pods-Sahayak.debug.xcconfig"; sourceTree = "<group>"; };
+		8AC623DBF3A3E2CB072F81F2 /* Pods-Sahayak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sahayak.release.xcconfig"; path = "Target Support Files/Pods-Sahayak/Pods-Sahayak.release.xcconfig"; sourceTree = "<group>"; };
+		D43FF9D506E70904424FA7E9 /* libPods-Sahayak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sahayak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -42,14 +42,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B0C5784998A29E517983E0C /* libPods-SahayakApp.a in Frameworks */,
+				3DE4DAD41476765101945408 /* libPods-Sahayak.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13B07FAE1A68108700A75B9A /* SahayakApp */ = {
+		13B07FAE1A68108700A75B9A /* Sahayak */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -59,11 +59,11 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				0731D3BB24204D9B009CAE85 /* Expo.plist */,
-				07287ACD2432831900C893F0 /* app.bundle */,
-				07287ACC2432831900C893F0 /* app.manifest */,
+				0731D3B524204D62009CAE85 /* Expo.plist */,
+				07C2E6E4243282B30028AF0A /* app.bundle */,
+				07C2E6E3243282B30028AF0A /* app.manifest */,
 			);
-			name = SahayakApp;
+			name = Sahayak;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -72,16 +72,16 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				2502ACF51380E8237829647D /* libPods-SahayakApp.a */,
+				D43FF9D506E70904424FA7E9 /* libPods-Sahayak.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6C68EC841F3FBF9CD21359E0 /* Pods */ = {
+		72E5486571395D51695C2A02 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				056F63395CAC2B8C2DC048FE /* Pods-SahayakApp.debug.xcconfig */,
-				E40B1F720DE0D29BF6B90074 /* Pods-SahayakApp.release.xcconfig */,
+				3B47C5AFCB8BDE514B7D1AC6 /* Pods-Sahayak.debug.xcconfig */,
+				8AC623DBF3A3E2CB072F81F2 /* Pods-Sahayak.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -96,11 +96,11 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* SahayakApp */,
+				13B07FAE1A68108700A75B9A /* Sahayak */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				6C68EC841F3FBF9CD21359E0 /* Pods */,
+				72E5486571395D51695C2A02 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* SahayakApp.app */,
+				13B07F961A680F5B00A75B9A /* Sahayak.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,11 +118,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13B07F861A680F5B00A75B9A /* SahayakApp */ = {
+		13B07F861A680F5B00A75B9A /* Sahayak */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SahayakApp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Sahayak" */;
 			buildPhases = (
-				56DD4AB7BC040A533152C46D /* [CP] Check Pods Manifest.lock */,
+				F8BC737F2AD7A05944D9E2A1 /* [CP] Check Pods Manifest.lock */,
 				FD4C38642228810C00325AF5 /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -133,9 +133,9 @@
 			);
 			dependencies = (
 			);
-			name = SahayakApp;
+			name = Sahayak;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* SahayakApp.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Sahayak.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,7 +147,7 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Facebook;
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SahayakApp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Sahayak" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -161,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* SahayakApp */,
+				13B07F861A680F5B00A75B9A /* Sahayak */,
 			);
 		};
 /* End PBXProject section */
@@ -171,9 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				074F4BDE2432834300BDB9FE /* app.bundle in Resources */,
-				074F4BDF2432834300BDB9FE /* app.manifest in Resources */,
-				0731D3BE24204D9B009CAE85 /* Expo.plist in Resources */,
+				074F4BDC2432833400BDB9FE /* app.bundle in Resources */,
+				074F4BDD2432833400BDB9FE /* app.manifest in Resources */,
+				0731D3B824204D62009CAE85 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -196,7 +196,7 @@
 			shellPath = /bin/sh;
 			shellScript = "../node_modules/expo-updates/bundle-expo-assets.sh\n";
 		};
-		56DD4AB7BC040A533152C46D /* [CP] Check Pods Manifest.lock */ = {
+		F8BC737F2AD7A05944D9E2A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,7 +211,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SahayakApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Sahayak-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,7 +258,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = SahayakApp;
+			path = Sahayak;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -266,12 +266,12 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 056F63395CAC2B8C2DC048FE /* Pods-SahayakApp.debug.xcconfig */;
+			baseConfigurationReference = 3B47C5AFCB8BDE514B7D1AC6 /* Pods-Sahayak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = SahayakApp/Info.plist;
+				INFOPLIST_FILE = Sahayak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -279,18 +279,18 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = SahayakApp;
+				PRODUCT_NAME = Sahayak;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E40B1F720DE0D29BF6B90074 /* Pods-SahayakApp.release.xcconfig */;
+			baseConfigurationReference = 8AC623DBF3A3E2CB072F81F2 /* Pods-Sahayak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = SahayakApp/Info.plist;
+				INFOPLIST_FILE = Sahayak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -298,7 +298,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = SahayakApp;
+				PRODUCT_NAME = Sahayak;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -405,7 +405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SahayakApp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Sahayak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -414,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SahayakApp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Sahayak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

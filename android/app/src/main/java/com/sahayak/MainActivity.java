@@ -1,4 +1,4 @@
-package com.sahayakapp;
+package com.sahayak;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
