@@ -20,6 +20,10 @@ const fetchFonts = () => {
     });
 };
 
+const done = ()=>{
+    
+}
+
 export default function IntroSlider() {
     const [dataLoaded, setDataLoaded] = useState(false)
 
@@ -58,6 +62,7 @@ export default function IntroSlider() {
                 renderItem={_renderItem}
                 showSkipButton
                 showPrevButton
+                renderDoneButton={done}
                 data={data}
             />
         </View>
