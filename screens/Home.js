@@ -24,8 +24,6 @@ const fetchFonts = () => {
   });
 };
 
-const flagUrl = findFlagUrlByCountryName("India");
-
 export default function Home() {
   const [dataLoaded, setDataLoaded] = useState(false);
 
@@ -163,5 +161,13 @@ const style = StyleSheet.create({
     color: "black",
     fontFamily: "Nunito-Bold",
     fontSize: 20,
-  }
+  },
+  lastUpdated: {
+    fontFamily: "Nunito-regular",
+  },
+  newsHeadline: {
+    fontSize: 17,
+    fontFamily: "Nunito-regular",
+    flex: 8,
+  },
 });

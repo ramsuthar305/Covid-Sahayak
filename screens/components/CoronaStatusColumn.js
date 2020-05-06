@@ -67,9 +67,5 @@ const style = StyleSheet.create({
     lastUpdated: {
         fontFamily: "Nunito-regular",
     },
-    newsHeadline: {
-        fontSize: 17,
-        fontFamily: "Nunito-regular",
-        flex: 8,
-    },
+  
 });
