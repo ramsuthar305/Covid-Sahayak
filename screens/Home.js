@@ -5,13 +5,13 @@ import {
   Image,
   StyleSheet,
   StatusBar,
-  SafeAreaView,
+  ScrollView,
   TouchableOpacity,
 } from "react-native";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
 import { Entypo } from "@expo/vector-icons";
-import { findFlagUrlByCountryName } from "country-flags-svg";
+
 import { Ionicons } from "@expo/vector-icons";
 import Columns from "./components/CoronaStatusColumn";
 
@@ -36,7 +36,7 @@ export default function Home() {
     );
   }
   return (
-    <SafeAreaView style={style.safeArea}>
+    <ScrollView style={style.safeArea}>
       <StatusBar translucent color="black" backgroundColor="black" />
       <View style={style.header}>
         <Image
@@ -113,14 +113,15 @@ export default function Home() {
           </View>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 }
-
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight;
+const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
 const style = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: StatusBar.currentHeight + 10,
+    marginTop: Platform.OS === 'ios' ? STATUSBAR_HEIGHT + 30 : StatusBar.currentHeight+10,
     paddingHorizontal: "3%",
   },
   menu: {

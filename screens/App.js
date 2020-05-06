@@ -5,11 +5,14 @@ import {
  
 } from 'react-native';
 
+import { NavigationContainer } from '@react-navigation/native';
+import MainScreen from './MainScreen'
+
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
-      <Text>this is app</Text>
-    </View>
+    <NavigationContainer>
+      <MainScreen/>
+    </NavigationContainer>
   );
 
 }

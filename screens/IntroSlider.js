@@ -6,6 +6,7 @@ import {
     StyleSheet,
     StatusBar,
     SafeAreaView,
+    Button,
 } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import * as Font from 'expo-font';
@@ -24,7 +25,7 @@ const done = ()=>{
     
 }
 
-export default function IntroSlider() {
+export default function IntroSlider({navigation}) {
     const [dataLoaded, setDataLoaded] = useState(false)
 
     if (!dataLoaded) {
@@ -65,6 +66,7 @@ export default function IntroSlider() {
                 renderDoneButton={done}
                 data={data}
             />
+            <Button title="Done" onPress={()=>navigation.navigate('Home')}/>
         </View>
     );
 
