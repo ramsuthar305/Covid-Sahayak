@@ -13,6 +13,7 @@ import { AppLoading } from "expo";
 import { Entypo } from "@expo/vector-icons";
 import { findFlagUrlByCountryName } from "country-flags-svg";
 import { Ionicons } from "@expo/vector-icons";
+import Columns from "./components/CoronaStatusColumn";
 
 const fetchFonts = () => {
   console.log("loading font");
@@ -37,15 +38,8 @@ export default function Home() {
     );
   }
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        marginTop: StatusBar.currentHeight + 10,
-        paddingHorizontal: "3%",
-      }}
-    >
+    <SafeAreaView style={style.safeArea}>
       <StatusBar translucent color="black" backgroundColor="black" />
-
       <View style={style.header}>
         <Image
           source={require("../assets/images/menu.png")}
@@ -76,38 +70,11 @@ export default function Home() {
         <TouchableOpacity>
           <View style={style.GlobalStatus} elevation={3}>
             <Text style={style.GlobalStatusHeading}>Coronavirus Global</Text>
-            <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }}
-            >
-              <View style={style.coronaStatusColumn}>
-                <Text style={style.casesHeading}>Total Cases</Text>
-                <Text style={[style.caseNumber, { color: "#3498db" }]}>
-                  1,254,464
-                </Text>
-
-                <Text style={[style.caseAddition, { color: "#3498db" }]}>
-                  <Text style={{ color: "#2c3e50" }}>Mar</Text> +61,999
-                </Text>
-              </View>
-              <View style={style.coronaStatusColumn}>
-                <Text style={style.casesHeading}>Total Cases</Text>
-                <Text style={[style.caseNumber, { color: "#e74c3c" }]}>
-                  1,254,464
-                </Text>
-                <Text style={[style.caseAddition, { color: "#e74c3c" }]}>
-                  <Text style={{ color: "#2c3e50" }}>Mar</Text> +61,999
-                </Text>
-              </View>
-              <View style={style.coronaStatusColumn}>
-                <Text style={style.casesHeading}>Total Cases</Text>
-                <Text style={[style.caseNumber, { color: "#27ae60" }]}>
-                  1,254,464
-                </Text>
-                <Text style={[style.caseAddition, { color: "#27ae60" }]}>
-                  <Text style={{ color: "#2c3e50" }}>Mar</Text> +61,999
-                </Text>
-              </View>
-            </View>
+            <Columns
+              cases={"1,254,464"}
+              deaths={"2,254,464"}
+              cured={"1,254,464"}
+            />
             <Text style={style.lastUpdated}>Last updated Apr 08, 03:54 PM</Text>
           </View>
         </TouchableOpacity>
@@ -122,38 +89,11 @@ export default function Home() {
               />
               <Text style={style.GlobalStatusHeading}> India</Text>
             </View>
-            <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }}
-            >
-              <View style={style.coronaStatusColumn}>
-                <Text style={style.casesHeading}>Total Cases</Text>
-                <Text style={[style.caseNumber, { color: "#3498db" }]}>
-                  3,114,464
-                </Text>
-
-                <Text style={[style.caseAddition, { color: "#3498db" }]}>
-                  <Text style={{ color: "#2c3e50" }}>Mar</Text> +61,999
-                </Text>
-              </View>
-              <View style={style.coronaStatusColumn}>
-                <Text style={style.casesHeading}>Total Cases</Text>
-                <Text style={[style.caseNumber, { color: "#e74c3c" }]}>
-                  4,222,009
-                </Text>
-                <Text style={[style.caseAddition, { color: "#e74c3c" }]}>
-                  <Text style={{ color: "#2c3e50" }}>Mar</Text> +61,999
-                </Text>
-              </View>
-              <View style={style.coronaStatusColumn}>
-                <Text style={style.casesHeading}>Total Cases</Text>
-                <Text style={[style.caseNumber, { color: "#27ae60" }]}>
-                  61,254
-                </Text>
-                <Text style={[style.caseAddition, { color: "#27ae60" }]}>
-                  <Text style={{ color: "#2c3e50" }}>Mar</Text> +61,999
-                </Text>
-              </View>
-            </View>
+            <Columns
+              cases={"1,254,464"}
+              deaths={"2,254,464"}
+              cured={"1,254,464"}
+            />
             <Text style={style.lastUpdated}>Last updated Apr 08, 03:54 PM</Text>
           </View>
         </TouchableOpacity>
@@ -180,6 +120,11 @@ export default function Home() {
 }
 
 const style = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight + 10,
+    paddingHorizontal: "3%",
+  },
   menu: {
     height: 25,
     width: 22,
@@ -218,28 +163,5 @@ const style = StyleSheet.create({
     color: "black",
     fontFamily: "Nunito-Bold",
     fontSize: 20,
-  },
-  coronaStatusColumn: {
-    marginVertical: "5%",
-  },
-  casesHeading: {
-    fontFamily: "Nunito-SemiBold",
-    fontSize: 17,
-  },
-  caseNumber: {
-    fontFamily: "Nunito-Bold",
-    marginVertical: "5%",
-    fontSize: 24,
-  },
-  caseAddition: {
-    fontFamily: "Nunito-SemiBold",
-  },
-  lastUpdated: {
-    fontFamily: "Nunito-regular",
-  },
-  newsHeadline: {
-    fontSize: 17,
-    fontFamily: "Nunito-regular",
-    flex: 8,
-  },
+  }
 });
