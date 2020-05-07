@@ -30,7 +30,7 @@ const fetchFonts = () => {
   });
 };
 
-export default function Home() {
+export default function Home({navigation}) {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [Data, setData] = useState([]);
   const [Month, setMonth] = useState(null);
@@ -158,13 +158,14 @@ export default function Home() {
                 </View>
 
               </View>
+              <TouchableOpacity onPress={() => navigation.navigate('IndiaStats')}>
+                <Columns
+                  cases={CountryData.TotalConfirmed.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+                  deaths={CountryData.TotalDeaths.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+                  cured={CountryData.TotalRecovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
 
-              <Columns
-                cases={CountryData.TotalConfirmed.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-                deaths={CountryData.TotalDeaths.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-                cured={CountryData.TotalRecovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-
-              />
+                />
+              </TouchableOpacity>
               <Text style={style.lastUpdated}>Last updated {lastUpdated}</Text>
             </View>
 
