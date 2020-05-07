@@ -18,6 +18,7 @@ import { Ionicons } from "@expo/vector-icons";
 import Columns from "./components/CoronaStatusColumn";
 import * as All from '../assets/flags/flags';
 import LottieView from 'lottie-react-native';
+import Header from './components/Header';
 
 
 const fetchFonts = () => {
@@ -102,19 +103,7 @@ export default function Home() {
       <ScrollView>
         <SafeAreaView style={style.safeArea}>
           <StatusBar translucent color="black" backgroundColor="black" />
-          <View style={style.header}>
-            <Image
-              source={require("../assets/images/menu.png")}
-              style={style.menu}
-            />
-            <View style={{ flexDirection: "row" }}>
-              <Image
-                source={require("../assets/images/corona.png")}
-                style={style.menu}
-              />
-              <Text style={style.headerTitle}> Sahayak</Text>
-            </View>
-          </View>
+          <Header />
           <View style={{ marginTop: "6%" }} elevation={2}>
             <TouchableOpacity>
               <View style={style.healthStatus}>
