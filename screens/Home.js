@@ -19,6 +19,10 @@ import Columns from "./components/CoronaStatusColumn";
 import * as All from '../assets/flags/flags';
 import LottieView from 'lottie-react-native';
 import Header from './components/Header';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createAppContainer } from 'react-navigation';
+import { DrawerNavigatorItems } from 'react-navigation-drawer';
+import SideMenu from './components/sidemenu'
 
 
 const fetchFonts = () => {
@@ -30,16 +34,19 @@ const fetchFonts = () => {
   });
 };
 
-export default function Home() {
+
+export function Home({ navigation }) {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [Data, setData] = useState([]);
   const [Month, setMonth] = useState(null);
   const [DataLoading, setDataLoading] = useState(true);
   const [CountryData, setCountryData] = useState(null);
-
   const [SelectedCountry, setSelectedCountry] = useState("India");
   const [countryList, setCountryList] = useState([]);
   const [lastUpdated, setlastUpdated] = useState(null);
+  const openDraw = () => {
+    navigation.openDrawer();
+  }
 
 
   useEffect(() => {
@@ -103,7 +110,9 @@ export default function Home() {
       <ScrollView>
         <SafeAreaView style={style.safeArea}>
           <StatusBar translucent color="black" backgroundColor="black" />
-          <Header />
+          <TouchableOpacity onPress={openDraw}>
+            <Header />
+          </TouchableOpacity>
           <View style={{ marginTop: "6%" }} elevation={2}>
             <TouchableOpacity>
               <View style={style.healthStatus}>
@@ -169,10 +178,10 @@ export default function Home() {
             </View>
 
           </View>
-          <Text style={[style.GlobalStatusHeading, { marginTop: "4%" }]}>
+          <Text style={[style.GlobalStatusHeading, { marginTop: "5%" }]}>
             Latest COVID-19 tweets
         </Text>
-          <View style={{ marginVertical: "3%" }}>
+          <View style={{ marginVertical: "5%" }}>
             <TouchableOpacity>
               <View style={style.GlobalStatus} elevation={3}>
                 <View style={{ flexDirection: "row" }}>
@@ -192,6 +201,26 @@ export default function Home() {
   }
 
 }
+const DrawerNavigation = createDrawerNavigator(
+  {
+    Home: Home,
+  },
+  {
+    contentComponent: SideMenu,
+  },
+);
+
+const ApplicationContainer = createAppContainer(DrawerNavigation);
+
+export default () => {
+  const [blue, setBlue] = useState(true);
+  return (
+
+    <ApplicationContainer />
+
+  );
+};
+
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight;
 const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
 
