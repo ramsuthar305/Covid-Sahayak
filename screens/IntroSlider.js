@@ -6,6 +6,7 @@ import {
     StyleSheet,
     StatusBar,
     SafeAreaView,
+    Button,
 } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import * as Font from 'expo-font';
@@ -14,19 +15,20 @@ import { data } from './data/IntroSliderData';
 
 const fetchFonts = () => {
     console.log('loading font')
+    
     return Font.loadAsync({
         'Nunito-regular': require('../assets/fonts/Nunito-Regular.ttf'),
         'Nunito-Bold': require('../assets/fonts/Nunito-Bold.ttf'),
     });
 };
 
-const done = ()=>{
-    
+const done = () => {
+    () => navigation.navigate('Home')
 }
 
-export default function IntroSlider() {
+export default function IntroSlider({ navigation }) {
     const [dataLoaded, setDataLoaded] = useState(false)
-
+    const [doneButton, enableDoneButton] = useState(false)
     if (!dataLoaded) {
         return (
             <AppLoading
@@ -47,24 +49,29 @@ export default function IntroSlider() {
                     <Image source={item.image} style={styles.image} />
                     <Text style={styles.title}>{item.title}</Text>
                 </SafeAreaView>
+                {item.key == 4 ? enableDoneButton(true) : enableDoneButton(false)}
+
             </View>
         );
     };
     _keyExtractor = (item) => item.key;
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: "white" }}>
             <StatusBar translucent color="black" backgroundColor="black" />
             <AppIntroSlider
                 dotStyle={{ backgroundColor: "grey" }}
                 activeDotStyle={{ backgroundColor: "black" }}
                 keyExtractor={_keyExtractor}
                 renderItem={_renderItem}
+
                 showSkipButton
                 showPrevButton
+                showDoneButton
                 renderDoneButton={done}
                 data={data}
             />
+            {doneButton ? <Button title="Done" onPress={() => navigation.navigate('Home')} style={{ marginHorizontal: "5%" }} /> : null}
         </View>
     );
 
@@ -72,7 +79,6 @@ export default function IntroSlider() {
 
 const styles = StyleSheet.create({
     slide: {
-
         alignItems: 'center',
         justifyContent: 'center',
         paddingBottom: 96, // Add padding to offset large buttons and pagination in bottom of page

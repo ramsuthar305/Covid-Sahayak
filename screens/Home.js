@@ -41,6 +41,7 @@ export default function Home() {
   const [CurrentMonthDeath, setCurrentMonthDeath] = useState(null);
   const [SelectedCountry, setSelectedCountry] = useState("India");
   const [countryList, setCountryList] = useState([]);
+  const [lastUpdated, setlastUpdated] = useState(null);
 
 
   useEffect(() => {
@@ -74,6 +75,7 @@ export default function Home() {
         if (country.Country == SelectedCountry) { return country }
 
       })
+      setlastUpdated(new Date().toDateString() + ", " + new Date().toLocaleTimeString())
       setCountryData(country[0])
       setCurrentMonthCases(CurrentMonthCountryData[CurrentMonthCountryData.length - 1].Confirmed - CurrentMonthCountryData[CurrentMonthCountryData.length - today - 1].Confirmed)
       setCurrentMonthRecovered(CurrentMonthCountryData[CurrentMonthCountryData.length - 1].Recovered - CurrentMonthCountryData[CurrentMonthCountryData.length - today - 1].Recovered)
@@ -136,7 +138,7 @@ export default function Home() {
                   deaths={Data.Global.TotalDeaths.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                   cured={Data.Global.TotalRecovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                 />
-                <Text style={style.lastUpdated}>Last updated Apr 08, 03:54 PM</Text>
+                <Text style={style.lastUpdated}>Last updated {lastUpdated}</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -178,18 +180,18 @@ export default function Home() {
                 currentMonthRecovered={"+ " + CurrentMonthRecovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                 currentMonthDeath={"+ " + CurrentMonthDeath.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
               />
-              <Text style={style.lastUpdated}>Last updated Apr 08, 03:54 PM</Text>
+              <Text style={style.lastUpdated}>Last updated {lastUpdated}</Text>
             </View>
 
           </View>
           <Text style={[style.GlobalStatusHeading, { marginTop: "4%" }]}>
-            Latest COVID-19 news
+            Latest COVID-19 tweets
         </Text>
           <View style={{ marginVertical: "3%" }}>
             <TouchableOpacity>
               <View style={style.GlobalStatus} elevation={3}>
                 <View style={{ flexDirection: "row" }}>
-                  <Entypo name="news" size={24} color="black" style={{ flex: 1 }} />
+                <Entypo name="twitter" size={24} color="black" />
                   <Text style={style.newsHeadline}>
                     {" "}
                   Lockdown 3.0 to be estended till 17 may
@@ -205,11 +207,13 @@ export default function Home() {
   }
 
 }
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight;
+const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
 
 const style = StyleSheet.create({
   safeArea: {
     flex: 1,
-    marginTop: StatusBar.currentHeight + 10,
+    marginTop: Platform.OS === 'ios' ? STATUSBAR_HEIGHT + 30 : StatusBar.currentHeight + 10,
     paddingHorizontal: "3%",
   },
   menu: {
@@ -255,7 +259,7 @@ const style = StyleSheet.create({
     fontFamily: "Nunito-regular",
   },
   newsHeadline: {
-    fontSize: 17,
+    fontSize: 16.5,
     fontFamily: "Nunito-regular",
     flex: 8,
   },
