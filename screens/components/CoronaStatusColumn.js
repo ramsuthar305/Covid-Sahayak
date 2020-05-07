@@ -7,7 +7,7 @@ import {
 
 } from "react-native";
 
-const Columns = ({ deaths, cases, cured, month,currentMonthCases, currentMonthRecovered, currentMonthDeath }) => {
+const Columns = ({ deaths, cases, cured }) => {
     return (
         <View
             style={{ flexDirection: "row", justifyContent: "space-between" }}
@@ -18,27 +18,21 @@ const Columns = ({ deaths, cases, cured, month,currentMonthCases, currentMonthRe
                     {cases}
                 </Text>
 
-                <Text style={[style.caseAddition, { color: "#3498db" }]}>
-                    <Text style={{ color: "#2c3e50" }}>{month}</Text> {currentMonthCases}
-                </Text>
+               
             </View>
             <View style={style.coronaStatusColumn}>
                 <Text style={style.casesHeading}>Total Deaths</Text>
                 <Text style={[style.caseNumber, { color: "#e74c3c" }]}>
                     {deaths}
                 </Text>
-                <Text style={[style.caseAddition, { color: "#e74c3c",  }]}>
-                    <Text style={{ color: "#2c3e50" }}>{month}</Text> {currentMonthRecovered}
-                </Text>
+                
             </View>
             <View style={style.coronaStatusColumn}>
                 <Text style={style.casesHeading}>Total Cured</Text>
                 <Text style={[style.caseNumber, { color: "#27ae60" }]}>
                     {cured}
                 </Text>
-                <Text style={[style.caseAddition, { color: "#27ae60" }]}>
-                    <Text style={{ color: "#2c3e50" }}>{month}</Text> {currentMonthDeath}
-                </Text>
+               
             </View>
         </View>
     );

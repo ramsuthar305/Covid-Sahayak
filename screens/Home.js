@@ -35,10 +35,7 @@ export default function Home() {
   const [Month, setMonth] = useState(null);
   const [DataLoading, setDataLoading] = useState(true);
   const [CountryData, setCountryData] = useState(null);
-  const [CurrentMonthCountryData, setCurrentMonthCountryData] = useState([]);
-  const [CurrentMonthCases, setCurrentMonthCases] = useState(null);
-  const [CurrentMonthRecovered, setCurrentMonthRecovered] = useState(null);
-  const [CurrentMonthDeath, setCurrentMonthDeath] = useState(null);
+
   const [SelectedCountry, setSelectedCountry] = useState("India");
   const [countryList, setCountryList] = useState([]);
   const [lastUpdated, setlastUpdated] = useState(null);
@@ -53,36 +50,38 @@ export default function Home() {
     fetchMyAPI();
   }, []);
 
+  function fetchCountryData() {
+    console.log('hii')
+    const currentCountry = Data.Countries.filter(country => {
+      if (country.Country == SelectedCountry) { return country }
+    })
+    setCountryData(currentCountry[0])
+    setDataLoading(!DataLoading)
+    console.log(CountryData)
+  }
+
+
   useEffect(() => {
-    async function fetchCurrentMonthCountryData() {
-      let response = await fetch("https://api.covid19api.com/dayone/country/" + SelectedCountry);
-      setCurrentMonthCountryData(await response.json());
-
+    if (Data.length != 0) {
+      fetchCountryData()
     }
-    fetchCurrentMonthCountryData();
-  }, [SelectedCountry]);
-
+  }, [SelectedCountry])
 
   useEffect(() => {
     console.log('Called' + Data.length)
-    if (Data.length != 0 && CurrentMonthCountryData.length != 0) {
-      console.log(countryList)
+    if (Data.length != 0) {
+      fetchCountryData()
+      //console.log(countryList)
       //console.log(JSON.stringify(CurrentMonthCountryData))
       let today = new Date().getDate()
       setMonth(new Date().toString().split(" ")[1])
       setDataLoading(false)
-      const country = Data.Countries.filter(country => {
-        if (country.Country == SelectedCountry) { return country }
-
-      })
+      fetchCountryData()
       setlastUpdated(new Date().toDateString() + ", " + new Date().toLocaleTimeString())
-      setCountryData(country[0])
-      setCurrentMonthCases(CurrentMonthCountryData[CurrentMonthCountryData.length - 1].Confirmed - CurrentMonthCountryData[CurrentMonthCountryData.length - today - 1].Confirmed)
-      setCurrentMonthRecovered(CurrentMonthCountryData[CurrentMonthCountryData.length - 1].Recovered - CurrentMonthCountryData[CurrentMonthCountryData.length - today - 1].Recovered)
-      setCurrentMonthDeath(CurrentMonthCountryData[CurrentMonthCountryData.length - 1].Deaths - CurrentMonthCountryData[CurrentMonthCountryData.length - today - 1].Deaths)
-      console.log(CurrentMonthCountryData[CurrentMonthCountryData.length - today - 1].Confirmed)
+
+
     }
-  }, [Data, CurrentMonthCountryData])
+  }, [Data])
 
 
   if (!dataLoaded) {
@@ -148,21 +147,21 @@ export default function Home() {
               <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
                 <View style={{ flexDirection: "row", flex: 2 }}>
                   <Image
-                    source={All[`${SelectedCountry}`]}
+                    source={All[`${SelectedCountry.replace(/ /g, "").replace(/,/g, "")}`]}
                     style={style.menu}
                   />
-                  <Text style={style.GlobalStatusHeading}> {SelectedCountry}</Text>
+                  <Text style={[style.GlobalStatusHeading, { flex: 1, flexWrap: 'wrap' }]}> {SelectedCountry}</Text>
                 </View>
                 <View style={{ flex: 1, marginTop: "-4%" }}>
 
                   <Picker
                     selectedValue={SelectedCountry}
-                    onValueChange={(country) => { setDataLoading(true); setSelectedCountry(country) }}
+                    onValueChange={(country) => { setDataLoading(!DataLoading); setSelectedCountry(country); fetchCountryData() }}
                     mode="dialog"
                     textStyle={{ color: "black", fontFamily: "Nunito-SemiBold" }} >
 
                     {Data.Countries.map((country, i) => {
-                      console.log(country.Country)
+
                       return (<Picker.Item key={i} value={country.Country} label={country.Country} />)
                     })}
 
@@ -175,10 +174,7 @@ export default function Home() {
                 cases={CountryData.TotalConfirmed.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                 deaths={CountryData.TotalDeaths.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                 cured={CountryData.TotalRecovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-                month={Month}
-                currentMonthCases={"+ " + CurrentMonthCases.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-                currentMonthRecovered={"+ " + CurrentMonthRecovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-                currentMonthDeath={"+ " + CurrentMonthDeath.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+
               />
               <Text style={style.lastUpdated}>Last updated {lastUpdated}</Text>
             </View>
@@ -191,7 +187,7 @@ export default function Home() {
             <TouchableOpacity>
               <View style={style.GlobalStatus} elevation={3}>
                 <View style={{ flexDirection: "row" }}>
-                <Entypo name="twitter" size={24} color="black" />
+                  <Entypo name="twitter" size={24} color="black" />
                   <Text style={style.newsHeadline}>
                     {" "}
                   Lockdown 3.0 to be estended till 17 may
