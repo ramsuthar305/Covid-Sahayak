@@ -167,13 +167,14 @@ export function Home({ navigation }) {
                 </View>
 
               </View>
+              <TouchableOpacity onPress={() => navigation.navigate('IndiaStats')}>
+                <Columns
+                  cases={CountryData.TotalConfirmed.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+                  deaths={CountryData.TotalDeaths.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+                  cured={CountryData.TotalRecovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
 
-              <Columns
-                cases={CountryData.TotalConfirmed.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-                deaths={CountryData.TotalDeaths.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-                cured={CountryData.TotalRecovered.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-
-              />
+                />
+              </TouchableOpacity>
               <Text style={style.lastUpdated}>Last updated {lastUpdated}</Text>
             </View>
 
