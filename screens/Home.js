@@ -174,7 +174,7 @@ export default function Home({navigation}) {
             Latest COVID-19 tweets
         </Text>
           <View style={{ marginVertical: "3%" }}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress = {() => navigation.navigate('Tweets')}>
               <View style={style.GlobalStatus} elevation={3}>
                 <View style={{ flexDirection: "row" }}>
                   <Entypo name="twitter" size={24} color="black" />

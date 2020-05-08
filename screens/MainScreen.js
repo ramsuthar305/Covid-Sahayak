@@ -8,6 +8,7 @@ import SignUpScreen from './SignUpScreen';
 import Home from'./Home';
 import IntroSlider from './IntroSlider';
 import IndiaStats from './IndiaStats';
+import Tweets from './Tweets'
 const Main = createStackNavigator();
 
 const MainScreen = ({navigation}) => (
@@ -18,6 +19,7 @@ const MainScreen = ({navigation}) => (
         <Main.Screen name="Home" component={Home}/>
         <Main.Screen name="IntroSlider" component={IntroSlider}/>
         <Main.Screen name="IndiaStats" component={IndiaStats}/>
+        <Main.Screen name="Tweets" component={Tweets}/>
     </Main.Navigator>
 );
 
