@@ -46,12 +46,13 @@
     "jest": "~25.2.6",
     "react-test-renderer": "~16.9.0"
   },
-  
   "jest": {
     "preset": "react-native"
   },
   "private": true,
   "rnpm": {
-    "assets": ["./assets/fonts/Nunito"]
-   }
+    "assets": [
+      "./assets/fonts/Nunito"
+    ]
+  }
 }

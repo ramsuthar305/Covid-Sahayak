@@ -232,14 +232,14 @@ const styles = StyleSheet.create({
         marginTop: 50
     },
     signIn: {
-        width: '81%',
+        width: '100%',
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10
     },
     signUp: {
-        width: '90%',
+        width: '100%',
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',

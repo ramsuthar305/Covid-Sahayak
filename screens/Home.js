@@ -23,8 +23,8 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer } from 'react-navigation';
 import { DrawerNavigatorItems } from 'react-navigation-drawer';
 import SideMenu from './components/sidemenu'
-
-
+import Tweets from './Tweets'
+import IndiaStats from './IndiaStats'
 const fetchFonts = () => {
   console.log("loading font");
   return Font.loadAsync({
@@ -205,6 +205,8 @@ export function Home({ navigation }) {
 const DrawerNavigation = createDrawerNavigator(
   {
     Home: Home,
+    Tweets:Tweets,
+    IndiaStats:IndiaStats,
   },
   {
     contentComponent: SideMenu,
