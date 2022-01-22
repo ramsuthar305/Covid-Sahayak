@@ -6121,9 +6121,9 @@ nan@^2.12.1:
   integrity sha512-isWHgVjnFjh2x2yuJ/tj3JbwoHu3UC2dX5G/88Cm24yB6YopVgxvBObDY7n5xW6ExmFhJpSEQqFPvq9zaXc8Jw==
 
 nanoid@^3.0.2:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.5.tgz#56da1bb76b619391fc61625e8b4e4bff309b9942"
-  integrity sha512-77yYm8wPy8igTpUQv9fA0VzEb5Ohxt5naC3zTK1oAb+u1MiyITtx0jpYrYRFfgJlefwJy2SkCaojZvxSYq6toA==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
+  integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -7280,6 +7280,11 @@ react-native-action-sheet@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-native-action-sheet/-/react-native-action-sheet-2.2.0.tgz#309a87f53bf4e7b17fdd9d24b10b8dcbaebb7230"
   integrity sha512-4lsuxH+Cn3/aUEs1VCwqvLhEFyXNqYTkT67CzgTwlifD9Ij4OPQAIs8D+HUD9zBvWc4NtT6cyG1lhArPVMQeVw==
+
+react-native-actionsheet@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/react-native-actionsheet/-/react-native-actionsheet-2.4.2.tgz#6a00dd51a75ef2c8974312130e405af73191500f"
+  integrity sha512-DBoWIvVwuWXuptF4t46pBqkFxaUxS+rsIdHiA05t0n4BdTIDV2R4s9bLEUVOGzb94D7VxIamsXZPA/3mmw+SXg==
 
 react-native-animatable@^1.3.3:
   version "1.3.3"
